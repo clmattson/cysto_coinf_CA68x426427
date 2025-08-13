@@ -168,8 +168,8 @@ for cross in `cat ${cross_list}`;
 do
 
 	mkdir ${demuxed_path}/${cross}
-        parent1="$(grep -m 1 "${cross}" ${sample_list} | awk -F"," '{print $3}')";
-        parent2="$(grep -m 1 "${cross}" ${sample_list} | awk -F"," '{print $4}')";
+        parent1="$(grep -m 1 "${cross}," ${sample_list} | awk -F"," '{print $3}')";
+        parent2="$(grep -m 1 "${cross}," ${sample_list} | awk -F"," '{print $4}')";
 
         grep "${parent1}" ${demuxed_path}/all_parent_db.fasta -A1 --no-group-separator >> ${demuxed_path}/${cross}/${cross}_parent_database.fasta;
         grep "${parent2}" ${demuxed_path}/all_parent_db.fasta -A1 --no-group-separator >> ${demuxed_path}/${cross}/${cross}_parent_database.fasta;
