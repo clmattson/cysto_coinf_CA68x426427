@@ -40,12 +40,13 @@ done
 
 
 #get list of barcodes for plaques only:
+#only works becuase of current cross vs plate terminology
 grep "cross" ${sample_list} | awk -F"," '{print $1}' >> ${demuxed_path}/plaque_barcodes.txt
 #get cross list:
 #awk -F"," '{print $2}' ${demuxed_path}/${sample_list} >> ${demuxed_path}/all_crosses.txt
 
 
-#prev scrip made a custom genotyping database for each cross, stored as "${demuxed_path}/${cross}_database.fasta
+#prev scrip made a custom genotyping database for each cross, stored as "${demuxed_path}/cross/${cross}_database.fasta
 
 #loop through each sample sequence data and u-search
 
@@ -97,7 +98,7 @@ do
 	#STRAIN ASSIGNMENT
 
 	echo
-	echo "now on plaque ${plaque_barcode}, aka parents ${parent1} x ${parent1}; # ${plaque_number}"
+	echo "now on plaque ${plaque_barcode}, aka parents ${parent1} x ${parent2}; # ${plaque_number}"
 	echo "reading file ${demuxed_path}/${plaque_barcode}/${plaque_barcode}.all.fastq ; generating file ${cross}/usearch/${cross}_${sample}_98_merged.b6"
 	echo 
 
