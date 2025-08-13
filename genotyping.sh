@@ -205,3 +205,9 @@ do
 
 #end the cross loop
 done	
+
+
+
+
+rerunning
+bash genotyping_new.sh -d /group/sldmunozgrp/cysto_coinf_CA68x426427/ -e /group/sldmunozgrp/cysto_coinf_CA68x426427/sample_list.csv -c /group/sldmunozgrp/cysto_coinf_CA68x426427/cross_list.txt -s /group/sldmunozgrp/cysto_coinf_CA68x426427/refs/ref_phi6_S_48.fasta -m /group/sldmunozgrp/cysto_coinf_CA68x426427/refs/ref_phi6_M_45.fasta -l /group/sldmunozgrp/cysto_coinf_CA68x426427/refs/ref_phi6_L_89.fasta
